@@ -7,7 +7,6 @@ import pyarrow.parquet as pq
 import shutil
 
 
-
 def get_catalog(catalog_name="default", test_db_name="test.db"):
     """
     Creates and returns a SqlCatalog object for managing Iceberg tables.
