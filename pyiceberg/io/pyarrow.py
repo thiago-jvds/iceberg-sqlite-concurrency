@@ -1354,12 +1354,10 @@ def project_table(
         if limit is not None and total_row_count >= limit:
             break
 
-    
     for future in concurrent.futures.as_completed(futures_index): # MIGHT NEED TO BE .KEYS
+        index, path_ = futures_index[future]
         if table_result := future.result():
             total_row_count += len(table_result)
-
-            index, path_ = futures_index[future]
 
             cache.put(path_, table_result)
             cache.get(path_) # make MRU
@@ -1368,18 +1366,17 @@ def project_table(
 
         # stop early if limit is satisfied
         if limit is not None and total_row_count >= limit:
+            for f, (i, _) in futures_index.items():
+                if not f.done():
+                    f.cancel() 
             break
 
     # by now, we've either completed all tasks or satisfied the limit
-    indexes_to_remove = []
-    if limit is not None:
-        for f, i, _ in futures_index.items():
-            if not f.done():
-                f.cancel() 
-                indexes_to_remove.append(i)
-
-        for i in indexes_to_remove[::-1]:
-            tables.pop(i)
+    while True:
+        try:
+            tables.remove(None)
+        except ValueError:
+            break
 
     if len(tables) < 1:
         return pa.Table.from_batches([], schema=schema_to_pyarrow(projected_schema, include_field_ids=False))

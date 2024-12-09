@@ -1,0 +1,251 @@
+Found credentials in shared credentials file: ~/.aws/credentials
+ONE FILTER QUERY REPEATED 10 TIMES WITH EACH CACHE TYPE: 
+
+
+cached retrieval for LRU Cache (filter: not store_and_fwd_flag == 'N') took 1.054921 seconds
+cache size in bytes: 1310572 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: True) took 0.676941 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: passenger_count == 7) took 1.212827 seconds
+cache size in bytes: 180 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: False) took 0.386435 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: trip_distance > 1 and trip_distance < 3) took 0.724251 seconds
+cache size in bytes: 12590738 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: trip_distance < 3 and trip_distance > 1) took 0.690964 seconds
+cache size in bytes: 12590738 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: trip_distance > 1 and trip_distance < 3) took 1.065686 seconds
+cache size in bytes: 12590738 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache (filter: trip_distance >= 0 or trip_distance < 0) took 0.731374 seconds
+cache size in bytes: 25518102 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: not store_and_fwd_flag == 'N') took 1.210877 seconds
+cache size in bytes: 1310572 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: True) took 0.733742 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: passenger_count == 7) took 0.677507 seconds
+cache size in bytes: 180 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: False) took 0.385411 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: trip_distance > 1 and trip_distance < 3) took 1.248043 seconds
+cache size in bytes: 12590738 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: trip_distance < 3 and trip_distance > 1) took 0.728406 seconds
+cache size in bytes: 12590738 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: trip_distance > 1 and trip_distance < 3) took 0.719798 seconds
+cache size in bytes: 12590738 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache (filter: trip_distance >= 0 or trip_distance < 0) took 1.238917 seconds
+cache size in bytes: 25518102 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: not store_and_fwd_flag == 'N') took 1.980438 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: True) took 1.595066 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: passenger_count == 7) took 1.353224 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: False) took 0.395544 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: trip_distance > 1 and trip_distance < 3) took 1.979270 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: trip_distance < 3 and trip_distance > 1) took 1.589854 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: trip_distance > 1 and trip_distance < 3) took 1.990963 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache (filter: trip_distance >= 0 or trip_distance < 0) took 2.056774 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+
+
+
+
+ ALL FILTERS IN A ROW FOR EACH CACHE TYPE: 
+
+
+cached retrieval for LRU Cache took 0.990395 seconds
+cache size in bytes: 38108840 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache took 1.500173 seconds
+cache size in bytes: 26808308 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache took 1.123526 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+Found credentials in shared credentials file: ~/.aws/credentials
+
+
+
+
+ DIFFERENT LIMITS FOR CACHES: 
+
+
+cached retrieval for LRU Cache with limit None took 1.262562 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache with limit 10000000000000000 took 0.665499 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache with limit 1000000 took 1.094982 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache with limit 1000 took 0.619687 seconds
+cache size in bytes: 656579 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache with limit 10 took 0.677376 seconds
+cache size in bytes: 657064 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for LRU Cache with limit 1 took 0.661913 seconds
+cache size in bytes: 1260912 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache with limit None took 1.223013 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache with limit 10000000000000000 took 0.720320 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache with limit 1000000 took 1.216385 seconds
+cache size in bytes: 25497556 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache with limit 1000 took 0.674961 seconds
+cache size in bytes: 2010226 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache with limit 10 took 0.646011 seconds
+cache size in bytes: 1260912 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for MRU Cache with limit 1 took 1.183621 seconds
+cache size in bytes: 1406378 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache with limit None took 1.470417 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache with limit 10000000000000000 took 1.980319 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache with limit 1000000 took 1.977330 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache with limit 1000 took 1.519995 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache with limit 10 took 1.054294 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+cached retrieval for no Cache with limit 1 took 1.333599 seconds
+cache size in bytes: 0 bytes
+
+-----------------------------------------------------------
+
+
+
+
+
+DIFFERENT CATALOGS: 
+
+

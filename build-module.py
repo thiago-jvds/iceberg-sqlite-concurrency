@@ -66,7 +66,6 @@ def build_cython_extensions() -> None:
 
 try:
     build_cython_extensions()
-except Exception as e:
-    print(e)
+except Exception:
     if not allowed_to_fail:
         raise
