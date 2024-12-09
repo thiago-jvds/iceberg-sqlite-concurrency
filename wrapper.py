@@ -1,8 +1,7 @@
 from pyiceberg.catalog import Catalog, _ENV_CONFIG, merge_config, CatalogType, _import_catalog, TYPE, PY_CATALOG_IMPL, logger, infer_catalog_type, AVAILABLE_CATALOGS
 from typing import *
-from cache import LRUCache
-from pyiceberg.typedef import RecursiveDict, Properties
-import importlib
+from pyiceberg.cache import LRUCache
+from pyiceberg.typedef import Properties
 from pyiceberg.catalog.glue import GlueCatalog
 
 
