@@ -5,7 +5,7 @@ import io
 import pyarrow.parquet as pq
 import pyarrow
 import time
-from cache import LRUCache
+from pyiceberg.cache import LRUCache
 
 CACHE = LRUCache()
 
