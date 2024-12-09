@@ -21,6 +21,7 @@ __pycache__/
 .tox/
 env/
 venv/
+env2/
 *.egg-info/
 test-reports
 build/

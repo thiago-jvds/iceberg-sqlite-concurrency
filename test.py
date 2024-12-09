@@ -1,11 +1,12 @@
 from pyiceberg.catalog import load_catalog
+from pyiceberg.cache import LRUCache
+
 import boto3
 import pandas as pd
 import io
 import pyarrow.parquet as pq
 import pyarrow
 import time
-from pyiceberg.cache import LRUCache
 
 CACHE = LRUCache()
 
