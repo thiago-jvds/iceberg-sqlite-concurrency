@@ -90,16 +90,16 @@ class Cache:
 
 class NoCache(Cache):
     ''' Fake cache that allows program to fuction as if no cache is involved '''
-    def get(self, key):
+    def get(self, key: str) -> None:
         return None
     
-    def put(self, file_key, file_content):
+    def put(self, file_key: str, file_content: Any) -> None:
         pass
 
-    def remove_from_cache(self):
+    def remove_from_cache(self) -> None:
         pass
 
-    def cache_policy(self, key):
+    def cache_policy(self, key: str) -> None:
         pass
 
 

@@ -31,6 +31,8 @@ sdist/
 coverage.xml
 .pytest_cache/
 
+plots/
+
 # vscode/eclipse files
 .classpath
 .project

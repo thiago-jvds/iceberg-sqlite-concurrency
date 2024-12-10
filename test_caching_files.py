@@ -2,7 +2,7 @@ from pyiceberg.catalog import load_catalog
 from pyiceberg.cache import LRUCache
 
 import boto3
-import pandas as pd
+
 import io
 import pyarrow.parquet as pq
 import pyarrow
@@ -42,7 +42,7 @@ for i in range(10):
     for data_file in file_path:
         path_ = data_file.file.file_path[len('s3://') + len(bucket_name) + 1:]
 
-        if CACHE.get(path_) != -1:
+        if CACHE.get(path_) is not None:
             collected_files_content.append(CACHE.get(path_))
         else:
             file_content = query_s3(path_)
@@ -58,7 +58,10 @@ for i in range(10):
     end_time = time.perf_counter()
     total_time += end_time - start_time
 print(f"cached retrieval took {(total_time/10):.6f} seconds")
-print(f"cache size in bytes: {CACHE.get_cache_byte_size()} bytes")
+size = 0
+for item in CACHE.cache.values():
+    size += item.getbuffer().nbytes
+print(f"cache size in bytes: {size} bytes")
 
 for i in range(10):
     start_time = time.perf_counter()

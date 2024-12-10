@@ -1193,6 +1193,7 @@ def _task_to_record_batches(
         if file_schema is None:
             raise ValueError(f"Missing Iceberg schema in Metadata for file: {path}")
 
+        ############## ACCESSES DATA IN CLOUD HERE BUT IN CYTHON #######################
         fragment_scanner = ds.Scanner.from_fragment(
             fragment=fragment,
             # With PyArrow 16.0.0 there is an issue with casting record-batches:
@@ -1241,7 +1242,7 @@ def _task_to_table(
     batches = list(
         _task_to_record_batches(
             fs, task, bound_row_filter, projected_schema, projected_field_ids, positional_deletes, case_sensitive, name_mapping
-        )
+        ) 
     )
 
     if len(batches) > 0:
@@ -1327,7 +1328,7 @@ def project_table(
     futures_index = {}
 
     for i, task in enumerate(tasks):
-        path_ = f"{task.file.file_path}_{row_filter}_{case_sensitive}"
+        path_ = f"{task.file.file_path}_{table_metadata.current_snapshot_id}_{row_filter}_{case_sensitive}"
 
         if cache.get(path_) is not None:
             result = cache.get(path_)
