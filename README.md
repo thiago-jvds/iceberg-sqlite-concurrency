@@ -27,9 +27,9 @@ In this repository, we extend its functionality in Python to allow for data file
     2. ` cd ~/.aws`
     3. `vim credentials` to edit or create a file without any extensions called credentials. Add the following to this file:
     `
-    [default]
-    aws_access_key_id = <Your access key>
-    aws_secret_access_key = <Your secret key>
+    [default]\n
+    aws_access_key_id = <Your access key>\n
+    aws_secret_access_key = <Your secret key>\n
     `
     4. Exit file by pressing the esc key and then typing `:wq` and hitting enter
     5. `vim config` to edit or create a file without any extensions called config. Add the following to this file:
